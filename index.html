@@ -3,89 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shah Zaman | Portfolio</title>
+    <title>Shah Zaman | Java Full-Stack & DevOps</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        body { background-color: #f0f2f5; color: #333; line-height: 1.6; scroll-behavior: smooth; }
         
         /* Navigation */
-        nav { background: #2d3436; color: white; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 100; }
+        nav { background: rgba(45, 52, 54, 0.95); color: white; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
         
         /* Hero Section */
         header { 
-            height: 60vh; 
+            height: 70vh; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
             align-items: center; 
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            background: linear-gradient(rgba(108, 92, 231, 0.8), rgba(162, 155, 254, 0.8)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 20px;
         }
-        header h1 { font-size: 3rem; margin-bottom: 10px; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
+        header h1 { font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        header p { font-size: 1.4rem; font-weight: 300; letter-spacing: 1px; }
 
         /* Content Sections */
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        section { background: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 3px solid #6c5ce7; display: inline-block; margin-bottom: 20px; color: #2d3436; }
+        .container { max-width: 1000px; margin: -50px auto 40px; padding: 0 20px; position: relative; }
+        section { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            transition: transform 0.3s ease;
+        }
+        section:hover { transform: translateY(-5px); }
+        h2 { border-left: 5px solid #6c5ce7; padding-left: 15px; margin-bottom: 25px; color: #2d3436; font-size: 1.8rem; }
 
         /* Skills Tags */
-        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { background: #e0e0ff; color: #6c5ce7; padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; }
+        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-tag { 
+            padding: 8px 18px; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            font-size: 0.85rem; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .java { background: #e67e22; color: white; }
+        .spring { background: #27ae60; color: white; }
+        .db { background: #2980b9; color: white; }
+        .devops { background: #2d3436; color: white; }
+        .web { background: #f1f2f6; color: #6c5ce7; border: 1px solid #6c5ce7; }
 
         /* Footer */
-        footer { text-align: center; padding: 40px; background: #2d3436; color: white; margin-top: 50px; }
-        .contact-btn { background: #fdcb6e; color: #2d3436; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
-        .contact-btn:hover { background: #e1b12c; }
+        footer { text-align: center; padding: 60px 20px; background: #2d3436; color: white; }
+        .contact-btn { 
+            background: #fdcb6e; 
+            color: #2d3436; 
+            padding: 15px 35px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(253, 203, 110, 0.4);
+        }
+        .contact-btn:hover { background: #e1b12c; transform: scale(1.05); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <strong>Shah Zaman - Full Stack Developer</strong>
+        <strong>SZ | Developer Portfolio</strong>
     </nav>
 
     <header>
         <h1>Shah Zaman</h1>
-        <p>Java Full-Stack Developer & DevOps Practitioner</p>
+        <p><i class="fa-solid fa-code"></i> Java Full-Stack Developer | <i class="fa-solid fa-gears"></i> DevOps Practitioner</p>
     </header>
 
     <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>I am a passionate developer from Pakistan, currently mastering web technologies and DevOps. I love building scalable applications and learning new languages like German to expand my professional horizons.</p>
+        <section id="about">
+            <h2><i class="fa-solid fa-user"></i> About Me</h2>
+            <p>I am a highly motivated developer from Pakistan with a core focus on building robust backend systems using <strong>Java</strong> and modern frontend experiences with <strong>Angular</strong>. Currently deep-diving into <strong>DevOps</strong> to bridge the gap between development and operations. Also an active learner of the German language to engage with global tech communities.</p>
         </section>
 
-        <section>
-            <h2>Technical Expertise</h2>
-                <div class="skills-container">
-                    <span class="skill-tag" style="background: #e67e22; color: white;">Java (J2EE)</span>
-                    <span class="skill-tag" style="background: #27ae60; color: white;">Spring Boot</span>
-                    <span class="skill-tag" style="background: #2980b9; color: white;">MySQL / PostgreSQL</span>
-                    
-                    <span class="skill-tag">Angular</span>
-                    <span class="skill-tag">JavaScript (ES6)</span>
-                    <span class="skill-tag">Bootstrap 5</span>
-                    
-                    <span class="skill-tag" style="background: #2d3436; color: white;">DevOps (Linux/Bash)</span>
-                    <span class="skill-tag" style="background: #2d3436; color: white;">Git & GitHub</span>
-                    <span class="skill-tag" style="background: #2d3436; color: white;">VIM / Terminal</span>
-                </div>
-            </section>
+        <section id="skills">
+            <h2><i class="fa-solid fa-laptop-code"></i> Technical Expertise</h2>
+            <div class="skills-container">
+                <span class="skill-tag java"><i class="fa-brands fa-java"></i> Java (J2EE)</span>
+                <span class="skill-tag spring"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+                <span class="skill-tag db"><i class="fa-solid fa-database"></i> MySQL / PostgreSQL</span>
+                <span class="skill-tag web"><i class="fa-brands fa-angular"></i> Angular</span>
+                <span class="skill-tag web"><i class="fa-brands fa-js"></i> JavaScript (ES6)</span>
+                <span class="skill-tag web"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</span>
+                <span class="skill-tag devops"><i class="fa-brands fa-linux"></i> Linux / Bash</span>
+                <span class="skill-tag devops"><i class="fa-solid fa-terminal"></i> Git & GitHub</span>
+                <span class="skill-tag devops"><i class="fa-solid fa-code-branch"></i> CI/CD Awareness</span>
+            </div>
+        </section>
 
-            <section>
-                <h2>Academic Project</h2>
-                <p><strong>Task Management System:</strong> A professional CRUD application built with Spring Boot and Angular to manage daily workflows efficiently.</p>
-            </section>
+        <section id="project">
+            <h2><i class="fa-solid fa-rocket"></i> Featured Project</h2>
+            <div style="border-left: 2px solid #eee; padding-left: 20px;">
+                <h3 style="color: #6c5ce7;">Task Management System</h3>
+                <p style="margin-top: 10px;">A full-scale professional CRUD application. Features include secure user authentication, real-time task tracking, and a responsive dashboard.</p>
+                <p style="margin-top: 5px; font-size: 0.9rem; color: #666;"><em>Tech Stack: Spring Boot, Angular, MySQL, JWT.</em></p>
+            </div>
+        </section>
     </div>
 
     <footer>
-        <p style="margin-bottom: 20px;">Let's connect and build something amazing together!</p>
-        <a href="mailto:your-email@example.com" class="contact-btn">Hire Me / Contact</a>
-        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Shah Zaman | Deployed via GitHub Pages</p>
+        <h2 style="color: white; border: none;">Interested in Collaboration?</h2>
+        <p style="margin-bottom: 30px; opacity: 0.8;">I'm always open to discussing new projects or opportunities.</p>
+        <a href="mailto:your-email@example.com" class="contact-btn"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+        <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Shah Zaman | Crafted with ❤️ & Java</p>
+        </div>
     </footer>
 
 </body>
